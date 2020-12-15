@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+
+  <title>SourceOfKnowledge</title>
+
+  <style>
+       .Signin {
+            font-size: 15px;
+            margin-top: 14px;
+            width: 68px;
+            padding-left: 6px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+
+        #nar {
+            color: white;
+            cursor: pointer;
+            margin-right: 18px;
+            padding: 5px;
+        }
+
+        .far {
+            font-size: 30px;
+        }
+
+        .maintain {
+            position: relative;
+            top: 15px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+       background-color:  #243b55;
+    }
+
+    .login-box {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 582px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+
+   
+    .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+
+    
+
+    .login-box a span {
+        position: absolute;
+        display: block;
+    }
+
+    
+    .list-inline{
+        display: none;
+    }
+    .login {
+    position: relative;
+    top: 743px;
+    height: 58px;
+}
+.Signin {
+    font-size: 15px;
+    margin-top: 14px;
+    width: 68px;
+    padding-left: 6px;
+}
+input:valid~label {
+    top: -24px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+.alert-primary {
+    position: relative;
+    top: 71px;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-radius: .25rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#141e30, #243b55);
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-box {
+    top: 65%;
+    width: 95vw;
+}
+}
+@media only screen and (max-width: 240px) {
+  .alert-primary{
+      display: none;
+  }
+  .login-box {
+    top: 65%;
+    width: 229px;
+}
+}
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <i id="nar" style='font-size:35px' class='far' onclick="openNav()">&#xf2bd;</i>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="/register.html">Register</a>
+                <a href="/login.html">login</a>
+                <a href="/404.html">Logout</a>
+                <a href="/404.html">Logout From All</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/404.html">secret</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0 har" action="/search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 mx-1" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+
+
+        <div class="login-box">
+            <h2>Register</h2>
+            <form action="/register" method="POST">
+                <div class="user-box">
+                    <input type="text" name="fullname" placeholder="Full Name">
+                    
+                </div>
+                <div class="user-box">
+                    <input type="email" name="email" placeholder="email">
+                </div>
+                <div class="user-box">
+                    <input type="text" name="password" placeholder="Create Password">
+                  
+                </div>
+                <div class="user-box">
+                    <input type="text" name="cfpass" placeholder="Confirm Password">
+                   
+                </div>
+                <div class="user-box">
+                    <input type="text" name="number" placeholder="Contact No.">
+                   
+                </div>
+                <input class="btn btn-primary" type="submit" value="Register">
+               
+            </form>
+        </div>
+    
+    
+        
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="pt-3 text-muted text-center text-small bg-dark">
+    <p class="mb-1">© 2017-2018 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item pb-3 "><a href="#">Privacy</a></li>
+      <li class="list-inline-item "><a href="#">Terms</a></li>
+      <li class="list-inline-item "><a href="#">Support</a></li>
+    </ul>
+  </footer>
+
+
+
+  <script>
+      
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

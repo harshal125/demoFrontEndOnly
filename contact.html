@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+
+  <title>SourceOfKnowledge</title>
+
+  <style>
+       .Signin {
+            font-size: 15px;
+            margin-top: 14px;
+            width: 68px;
+            padding-left: 6px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+
+        #nar {
+            color: white;
+            cursor: pointer;
+            margin-right: 18px;
+            padding: 5px;
+        }
+
+        .far {
+            font-size: 30px;
+        }
+
+        .maintain {
+            position: relative;
+            top: 15px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+              font-size: 18px;
+            }
+        }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <i id="nar" style='font-size:35px' class='far' onclick="openNav()">&#xf2bd;</i>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="/register.html">Register</a>
+                <a href="/login.html">login</a>
+                <a href="/404.html">Logout</a>
+                <a href="/404.html">Logout From All</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/404.html">secret</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0 har" action="/search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 mx-1" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+
+
+        <div class="container mt-5">
+            <form class="mt-5 my-5 pt-3" action="/contact" method="POST">
+                <div class="form-group mt-5 ">
+                    <label for="exampleFormControlInput1"> Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="name"
+                        placeholder="please Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email </label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="emails" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">phone</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" name="phone"
+                        placeholder="Enter your active number">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Address</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="add"
+                        placeholder="Enter your current address">
+                </div>
+        <div class="form-group ">
+            <label for="exampleFormControlTextarea1">Write Here</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="space" rows="3"></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+        </div>
+    
+    
+    
+    
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="pt-3 text-muted text-center text-small bg-dark">
+    <p class="mb-1">© 2017-2018 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item pb-3 "><a href="#">Privacy</a></li>
+      <li class="list-inline-item "><a href="#">Terms</a></li>
+      <li class="list-inline-item "><a href="#">Support</a></li>
+    </ul>
+  </footer>
+
+
+
+  <script>
+      
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
